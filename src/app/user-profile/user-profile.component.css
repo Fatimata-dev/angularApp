@@ -26,6 +26,9 @@
         cursor: pointer;
         margin: 5%;
     }
+    .test{
+        color: #007bff;
+    }
 }
 h1{
     text-align: center;

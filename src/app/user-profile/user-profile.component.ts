@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { User } from '../../interface/user.interface';
+import { NgFor, NgClass } from '@angular/common';
 
 
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [],
+  imports: [NgFor, NgClass],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css'
 })

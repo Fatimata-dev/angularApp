@@ -3,7 +3,7 @@
 <div class="profile">
     <h1>Profile</h1>
     <img [src]="user.photo" alt="">
-    <h1>Hello {{user.firstName}} {{user.name}}</h1>
+    <h1 [ngClass]="{'test': showAge}">Hello {{user.firstName}} {{user.name}}</h1>
     <h4>Citation: {{user.quote}}</h4>
     <input (keydown)="onKeydown($event)" />
     <div >
