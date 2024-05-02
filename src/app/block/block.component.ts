@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './block.component.css'
 })
 export class BlockComponent {
+  tab = [1,2,3,4]
 
 }

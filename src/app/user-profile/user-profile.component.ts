@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from '../../interface/user.interface';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { Component } from '@angular/core';
 
 export class UserProfileComponent {
   showAge = true;
-    user = {
+    user :User= {
     name : 'Doe',
     firstName : 'John',
     age : 25,
