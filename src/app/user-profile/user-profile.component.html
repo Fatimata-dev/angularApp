@@ -1,0 +1,13 @@
+
+<h1>Le Binding</h1>
+<div class="profile">
+    <h1>Profile</h1>
+    <img [src]="user.photo" alt="">
+    <h1>Hello {{user.firstName}} {{user.name}}</h1>
+    <h4>Citation: {{user.quote}}</h4>
+    <input (keydown)="onKeydown($event)" />
+    <div >
+        <h4>Age:@if(showAge){ {{user.age}}}</h4>
+    </div>
+    <button (click)="ageToggle()">Afficher/Masquer l'age</button>
+</div>
