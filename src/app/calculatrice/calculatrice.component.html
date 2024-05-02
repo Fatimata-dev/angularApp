@@ -1,0 +1,21 @@
+<section class="container">
+    <div class="num">
+        <h2>Nombre aleatoire</h2>
+        <button (click)="onButton1Click()">Afficher le 1er nombre aleatoir</button>
+        <h1>1er nombre aleatoire  {{random1}}</h1>
+        <button (click)="onButton2Click()">Afficher 2e nombre aleatoir</button>
+        <h1>2eme nombre aletoire {{random2}}</h1>
+    
+    </div>
+    <div class="operation">
+        <h2>choix de l'operation</h2>
+    <button (click)="Calculate('+')">Addition</button>
+    <button (click)="Calculate('-')">Soustraction</button>
+    <button (click)="Calculate('*')">Multiplication</button>
+    <button (click)="Calculate('/')">Division</button>
+    </div>
+</section>
+<div class="resultat">
+    <h1>Operation ( {{operation}} )</h1>
+    <h1>Resultat = {{resultat}}</h1>
+</div>

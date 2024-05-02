@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CalculatriceComponentComponent } from './calculatrice-component.component';
+import { CalculatriceComponentComponent } from './calculatrice.component';
 
 describe('CalculatriceComponentComponent', () => {
   let component: CalculatriceComponentComponent;
