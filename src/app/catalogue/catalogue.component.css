@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+ul{
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+}

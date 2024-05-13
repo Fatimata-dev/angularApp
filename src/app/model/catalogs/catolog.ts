@@ -4,6 +4,6 @@ export class Catolog {
        public id:number,
        readonly nom: string,
        public prix: number|undefined = undefined,
-       public enPromo:boolean = false,
+       public enPromo:boolean = false
       ) {} 
 }
