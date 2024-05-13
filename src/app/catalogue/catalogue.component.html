@@ -1,0 +1,19 @@
+<h1>catalogue works!</h1>
+<ul>
+  @for( produit of pasEnPromoAvecPrix ;track produit){ 
+  <h4>Le reste des produits</h4>
+  {{ produit.nom }}, {{ produit.prix? "€" + produit.prix : "" }}
+    {{ produit.enPromo ? "on sales" : "" }}
+  }
+  @for( produit of enPromotion ;track produit){ 
+    <h4>Produits en promo</h4>
+    <li>Id: {{ produit.id }}</li>
+    <li>Nom: {{ produit.nom }}</li>
+    <li>Produit: {{produit ? "€" + produit.prix : "" }} en promo</li>
+    }
+    @for( produit of paDePrix ;track produit){ 
+        <h4>Sans prix</h4>
+        {{ produit.nom }},
+        {{ produit.enPromo ? "on sales" : "" }}
+    }
+

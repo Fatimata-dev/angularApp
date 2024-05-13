@@ -1,28 +1,29 @@
 import { Component } from '@angular/core';
-import { User } from '../../interface/user.interface';
 import { NgFor, NgClass } from '@angular/common';
+import { UserCard } from '../model/User/user-card';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [NgFor, NgClass],
+  imports: [NgFor, NgClass,FormsModule],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css'
 })
 
 export class UserProfileComponent {
   showAge = true;
-    user :User= {
-    name : 'Doe',
-    firstName : 'John',
-    age : 25,
-    quote : '',
-    photo : 'https://randomuser.me/api/portraits/lego/2.jpg'
-  };
-  onKeydown(event: any) {
-    this.user.quote = event.target.value;
-  }
+    user :UserCard= new UserCard(
+    'Doe',
+     'John',
+     25,
+     '',
+     'https://randomuser.me/api/portraits/lego/2.jpg'
+     );
+  // onKeydown(event: any) {
+  //   this.user.quote = event.target.value;
+  // }
 
   ageToggle(){
     if(this.showAge){ 

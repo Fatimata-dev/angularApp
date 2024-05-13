@@ -5,7 +5,8 @@
     <img [src]="user.photo" alt="">
     <h1 [ngClass]="{'test': showAge}">Hello {{user.firstName}} {{user.name}}</h1>
     <h4>Citation: {{user.quote}}</h4>
-    <input (keydown)="onKeydown($event)" />
+    <!-- <input (keydown)="onKeydown($event)" /> -->
+    <input type="text" [(ngModel)]="user.quote">
     <div >
         <h4>Age:@if(showAge){ {{user.age}}}</h4>
     </div>

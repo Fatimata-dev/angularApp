@@ -1,7 +1,28 @@
-  main {
+  nav{
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: blanchedalmond;
+    margin: 0%;
+
+    ul{
+      display: flex;
+      list-style: none;
+      justify-content: space-between;
+      li{
+        margin: 0 1rem;
+        a{
+          text-decoration: none;
+          color: black;
+          cursor: pointer;
+
+        }
+      }
+    }
+  
+  }
+  .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     width: 100%;
     position: relative;
     h1 , p{
