@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgFor, NgClass } from '@angular/common';
-import { UserCard } from '../model/User/user-card';
+import { UserCard } from '../../model/User/user-card';
 import { FormsModule } from '@angular/forms';
 
 

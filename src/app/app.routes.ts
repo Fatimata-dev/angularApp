@@ -4,8 +4,8 @@ import { CatalogueComponent } from './catalogue/catalogue.component';
 import { CalculatriceComponent } from './calculatrice/calculatrice.component';
 import { DirectivesComponent } from './directives/directives.component';
 import{MenuComponent} from './menu/menu.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
+import { UserProfileComponent } from './menu/user-profile/user-profile.component';
+import { SignUpComponent } from './menu/sign-up/sign-up.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '', pathMatch: 'full'},

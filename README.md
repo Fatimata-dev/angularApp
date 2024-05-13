@@ -25,6 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
+## installing the dependencies
 When yo pull the project you have to install the dependecies with this commande (npm intall)
 and run this command ng serve -o to see the project in your browther
+
+## Quests
+All of my quests are in the same repository.
