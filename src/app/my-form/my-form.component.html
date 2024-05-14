@@ -1,0 +1,38 @@
+<div>
+    <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+        <fieldset>
+            <label for="title">Tilte</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="title" required minlength="5" [(ngModel)]="newOrder.title" #title="ngModel">
+        </fieldset>
+        <div *ngIf="submitted && title.errors">
+            <span *ngIf="title.errors?.['required']">Le champ titre est requis</span>
+            <span *ngIf="title.errors?.['minlength']">La longueur minimale doit être supérieure à 5</span>
+            <span *ngIf="title.errors?.['maxlength']">La longueur maximale doit être inférieure à 30</span>
+          </div>
+        <fieldset>
+            <label for="contact">contact</label>
+            <input type="email" class="form-control" id="contact" name="contact" placeholder="contact" required [(ngModel)]="newOrder.contact" #contact="ngModel" email>
+        </fieldset>
+        <div *ngIf="submitted && contact.errors">
+            <span *ngIf="contact.errors?.['required']">Le champ email est requis</span>
+            <span *ngIf="contact.errors?.['email']">L'adresse email doit être valide</span>
+          </div>
+        <fieldset>
+            <label for="date">Date</label>
+            <input type="date" class="form-control" id="date" name="date" placeholder="date" required [(ngModel)]="newOrder.date" #date="ngModel">
+        </fieldset>
+        <div *ngIf="submitted && date.errors">
+            <span *ngIf="date.errors?.['required']">Le champ date est requis</span>
+          </div>
+        <fieldset>
+            <label for="quantity">quantity</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" placeholder="quantity" required [(ngModel)]="newOrder.quantity" #quantity="ngModel">
+        </fieldset>
+        <div *ngIf="submitted && quantity.errors">
+            <span *ngIf="quantity.errors?.['required']">Le champ quantité est requis</span>
+            <span *ngIf="quantity.errors?.['min']">La quantité doit être supérieure à 0</span>
+          </div>
+        <button type="submit">Save</button>
+        <button type="reset">Restaure</button>
+    </form>
+</div>
