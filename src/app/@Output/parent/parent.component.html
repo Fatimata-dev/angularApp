@@ -1,0 +1,7 @@
+<div class="container">
+    <h1>Liste des onomatopoeia</h1>
+@for (onomatopoeia of onomatopoeiaList; track onomatopoeia) {
+    <li>{{onomatopoeia}}</li>
+}
+<app-create-onomatopia (sendOnomatopiaToParent)="onReceiveNewOnomatopia($event)"></app-create-onomatopia>
+</div>

@@ -12,7 +12,7 @@ import{Input} from '@angular/core';
 })
 export class SkillComponent {
   @Input()
-  skill: Skill = { name: '', logo: '', site: '' };
+  skill!: Skill ;
   
   OnSubmit(){
     

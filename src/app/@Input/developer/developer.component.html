@@ -45,7 +45,7 @@
     <h4>Genre:{{developer.gender}}</h4>
     <h4>Bio:{{developer.bio}}</h4>
     <h2>Compétences:</h2>
-    @for (skill of developer.skills; track $index) {
+    @for (skill of developer.skills; track skill) {
       <app-skill [skill]="skill"></app-skill>
     }
   }

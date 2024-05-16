@@ -1,4 +1,4 @@
 
-  <h5 class="card-title">-{{ skill.name }}</h5>
-  <p class="card-text">- Site : {{ skill.site }}</p>
-  <p>Logo</p><img [src]="skill.logo" [alt]="skill.name">
+  <h5 class="card-title">{{ skill.name }}</h5>
+  <a href="{{skill.site}}" target="_blank"> Documentation</a>
+  <p>Logo</p><img src="{{skill.logo}}" [alt]="skill.name">

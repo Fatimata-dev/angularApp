@@ -3,6 +3,7 @@ import { Developer } from '../../models/developer';
 import {FormsModule} from '@angular/forms'
 import { SkillComponent } from './skill/skill.component';
 import { NgFor } from '@angular/common';
+import { Skill } from '../../models/skill';
 
 @Component({
   selector: 'app-developer',
@@ -12,16 +13,20 @@ import { NgFor } from '@angular/common';
   styleUrl: './developer.component.css'
 })
 export class DeveloperComponent {
-  developer:Developer={
-    
-    lastName:"Timfa",
-    firstName :"Emard",
-    age :29,
-    gender :"Femme",
-    bio :" !إذا لم تجمعنا الأيام جمعتنا الذكريات وإذالعين لم تراك فالقلب لن تنساك ",
-    skills:[{name:"Esprit d'équipe",logo:"https://ssl.sitew.org/images/blog/articles/cover/pixabay.jpg",site:"http://localhost:4200/developer"}, {name:"Dynamique",logo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdhIr4QkDQEujEzvK8sEEfSauPqB2MSM_LMrBe2k3ftg&s",site:"http://localhost:4200/developer"}]
-    }
+  skills :Skill[] =  [
+    new Skill ('Angular',"https://blog.ninja-squad.com/assets/images/angular_gradient.png","http://localhost:4200/developer"), 
+    new Skill ('Java',"https://cdn.worldvectorlogo.com/logos/java.svg","http://localhost:4200/developer")
+    ];
+  developer:Developer= new Developer(
+   "Timfa",
+   "Emard",
+    29,
+   "Femme",
   
+    " !إذا لم تجمعنا الأيام جمعتنا الذكريات وإذالعين لم تراك فالقلب لن تنساك ",
+    this.skills
+   
+  )
     OnSubmit(){
       
     }

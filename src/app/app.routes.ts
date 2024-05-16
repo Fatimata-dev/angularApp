@@ -10,6 +10,7 @@ import { MyFormComponent } from './my-form/my-form.component';
 import { WildStudentComponent } from './wild-student/wild-student.component';
 import { SearchComponent } from './search/search.component';
 import { DeveloperComponent } from './@Input/developer/developer.component';
+import { ParentComponent } from './@Output/parent/parent.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -22,7 +23,9 @@ export const routes: Routes = [
     {path:'my-form', component:MyFormComponent},
     {path:'wcs', component:SearchComponent},
     {path:'wcs/:userName',component:WildStudentComponent},
-    {path:'developer', component:DeveloperComponent}
+    {path:'input', component:DeveloperComponent},
+    {path:'outpout', component:ParentComponent},
+    {path:'**', redirectTo: 'home'}
 
    
 ];
