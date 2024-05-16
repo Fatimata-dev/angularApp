@@ -1,0 +1,55 @@
+
+<form (ngSubmit)="OnSubmit()" #myForm="ngForm">
+    <fieldset>
+        <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" [(ngModel)]="developer.lastName" #lastName="ngModel">
+    </fieldset>
+  <fieldset>
+    
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="developer.firstName" #firstName="ngModel">
+  
+  </fieldset>
+    <fieldset>
+        <label for="age">Age:</label>
+    <input type="number" id="age" name="age" [(ngModel)]="developer.age" #age="ngModel">
+  
+    </fieldset>
+    <fieldset>
+        
+    <label for="gender">Gender:</label>
+    <input type="text" id="gender" name="gender" [(ngModel)]="developer.gender" #gender="ngModel">
+    </fieldset>
+  
+    <fieldset>
+        <label for="bio">Bio:</label>
+    <input type="text" id="bio" name="bio" [(ngModel)]="developer.bio" #bio="ngModel">
+    </fieldset>
+  
+    
+  <!-- <fieldset>
+    <label for="skills">Skills:</label>
+    <select id="skills" name="skills" [(ngModel)]="developer.skills" #skills="ngModel">
+      <option *ngFor="let skill of developer.skills" [value]="skill.name" >
+        {{ skill.name }}
+      </option>
+    </select>
+  </fieldset> -->
+  
+</form>
+<div class="Container">
+  @if (myForm) {
+    <h4>Nom:{{developer.firstName}}</h4>
+    <h4>Prénom:{{developer.lastName}}</h4>
+    <h4>Age:{{developer.age}}</h4>
+    <h4>Genre:{{developer.gender}}</h4>
+    <h4>Bio:{{developer.bio}}</h4>
+    <h4>Compétences:</h4>
+    @for (skill of developer.skills; track $index) {
+      <app-skill [skill]="skill"></app-skill>
+    }
+  }
+</div>
+     
+    
+  

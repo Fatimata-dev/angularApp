@@ -9,9 +9,10 @@ import { SignUpComponent } from './menu/sign-up/sign-up.component';
 import { MyFormComponent } from './my-form/my-form.component';
 import { WildStudentComponent } from './wild-student/wild-student.component';
 import { SearchComponent } from './search/search.component';
+import { DeveloperComponent } from './@Input/developer/developer.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: '', pathMatch: 'full'},
+    { path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'block', component: BlockComponent},
     { path: 'catalogue', component:CatalogueComponent},
     {path:'calculatrice', component:CalculatriceComponent},
@@ -20,7 +21,8 @@ export const routes: Routes = [
      children: [{path: '', redirectTo: 'user-profile', pathMatch: 'full' },{path:'user-profile', component:UserProfileComponent},{path:'sign-up', component:SignUpComponent}]},
     {path:'my-form', component:MyFormComponent},
     {path:'wcs', component:SearchComponent},
-    {path:'wcs/:userName',component:WildStudentComponent}
+    {path:'wcs/:userName',component:WildStudentComponent},
+    {path:'developer', component:DeveloperComponent}
 
    
 ];
