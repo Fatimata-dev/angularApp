@@ -1,4 +1,4 @@
-
+<!-- 
 <form (ngSubmit)="OnSubmit()" #myForm="ngForm">
     <fieldset>
         <label for="lastName">Last Name:</label>
@@ -27,24 +27,24 @@
     </fieldset>
   
     
-  <!-- <fieldset>
+<fieldset>
     <label for="skills">Skills:</label>
     <select id="skills" name="skills" [(ngModel)]="developer.skills" #skills="ngModel">
       <option *ngFor="let skill of developer.skills" [value]="skill.name" >
         {{ skill.name }}
       </option>
     </select>
-  </fieldset> -->
+  </fieldset> --> 
   
-</form>
+<!-- </form> -->
 <div class="Container">
-  @if (myForm) {
+  @if (developer) {
     <h4>Nom:{{developer.firstName}}</h4>
     <h4>Prénom:{{developer.lastName}}</h4>
     <h4>Age:{{developer.age}}</h4>
     <h4>Genre:{{developer.gender}}</h4>
     <h4>Bio:{{developer.bio}}</h4>
-    <h4>Compétences:</h4>
+    <h2>Compétences:</h2>
     @for (skill of developer.skills; track $index) {
       <app-skill [skill]="skill"></app-skill>
     }

@@ -14,12 +14,12 @@ import { NgFor } from '@angular/common';
 export class DeveloperComponent {
   developer:Developer={
     
-    lastName:"",
-    firstName :"",
-    age :0,
-    gender :"",
-    bio :"",
-    skills:[{name:"Esprit d'équipe",logo:"https://ssl.sitew.org/images/blog/articles/cover/pixabay.jpg",site:"Hi"}, {name:"Dynamique",logo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdhIr4QkDQEujEzvK8sEEfSauPqB2MSM_LMrBe2k3ftg&s",site:"c"}]
+    lastName:"Timfa",
+    firstName :"Emard",
+    age :29,
+    gender :"Femme",
+    bio :" !إذا لم تجمعنا الأيام جمعتنا الذكريات وإذالعين لم تراك فالقلب لن تنساك ",
+    skills:[{name:"Esprit d'équipe",logo:"https://ssl.sitew.org/images/blog/articles/cover/pixabay.jpg",site:"http://localhost:4200/developer"}, {name:"Dynamique",logo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdhIr4QkDQEujEzvK8sEEfSauPqB2MSM_LMrBe2k3ftg&s",site:"http://localhost:4200/developer"}]
     }
   
     OnSubmit(){
