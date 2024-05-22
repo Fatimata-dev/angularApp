@@ -15,7 +15,8 @@ export class CreateKittenComponent {
   kitten = {
     name: '',
     age : 0,
-    race:''
+    race:'',
+    link:''
 
   }
 

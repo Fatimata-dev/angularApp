@@ -10,6 +10,7 @@
         <th>Name:</th>
         <th>Date de naissance:</th>
         <th>Race: </th>
+        <th>Lien image: </th>
         <th>Action: </th>
     </tr>
 </thead>
@@ -19,6 +20,7 @@
             <td>{{kitten.name}}</td>
             <td>{{kitten.age}}</td>
             <td>{{kitten.race}}</td>
+            <td><button><a href="{{kitten.link}}" target="_blank">{{kitten.link}}</a></button></td>
             <td>
                 <button (click)="adoptKitten(kitten)">Adopt</button>
             </td>
