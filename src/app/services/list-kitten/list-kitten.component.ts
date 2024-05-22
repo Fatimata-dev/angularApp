@@ -1,13 +1,12 @@
 import { Component, inject } from '@angular/core';
-import { RouterOutlet,RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { CreateKittenComponent } from '../create-kitten/create-kitten.component';
 import { KittenService } from '../../kitten.service';
-import { UserKittenComponent } from '../user-kitten/user-kitten.component';
 
 @Component({
   selector: 'app-list-kitten',
   standalone: true,
-  imports: [ RouterOutlet,RouterLink ,CreateKittenComponent,UserKittenComponent],
+  imports: [RouterLink ,CreateKittenComponent],
   templateUrl: './list-kitten.component.html',
   styleUrl: './list-kitten.component.css'
 })

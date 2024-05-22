@@ -1,0 +1,19 @@
+.container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+ul{
+    list-style-type: none;
+    
+li{
+    margin: 10px auto;
+    background-color: antiquewhite;
+    width: 20%;
+    padding: 10px ;
+    border: 1px solid #000;
+    text-decoration-line: none;
+  }
+}

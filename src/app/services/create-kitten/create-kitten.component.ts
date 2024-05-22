@@ -15,12 +15,13 @@ export class CreateKittenComponent {
   kitten = {
     name: '',
     age : 0,
-    race: ''
+    race:''
 
   }
 
   createKitten(){
     this.kittenService.createKitten(this.kitten);
+    console.log(this.kitten);
   }
 
 }

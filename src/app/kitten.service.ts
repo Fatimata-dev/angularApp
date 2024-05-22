@@ -11,7 +11,7 @@ export class KittenService {
 
   createKitten(kitten: any){
     localStorage.setItem('Kittens', JSON.stringify([...this.kittens, kitten]))
-
+    this.kittens.push(kitten);
   
   }
   getKitens(){
@@ -23,6 +23,7 @@ export class KittenService {
    adoptedKitten= this.kittens.pop();
     localStorage.setItem('Kittens', JSON.stringify(this.kittens));
     localStorage.setItem('AdoptedKitten', JSON.stringify([...this.adoptedkittens,adoptedKitten]));
+    this.adoptedkittens.push(adoptedKitten);
   }
 
   getAdoptedKitten(){

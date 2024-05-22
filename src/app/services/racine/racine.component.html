@@ -1,8 +1,30 @@
-<select [(ngModel)]="selectedRace">
+<!-- <select [(ngModel)]="selectedRace">
     
 
 @for (race of races; track race) {
 
     <option value="{{race}}">{{race}}</option>
 }
-</select>
+</select> -->
+
+<nav>
+    <ul>
+        <li>
+        <a [routerLink]="['/kitten/create']">Create kitten</a>
+        </li>
+        
+    </ul>
+
+</nav>
+<router-outlet></router-outlet>
+
+<div class="container">
+    <div class="allKittens">
+        <app-list-kitten></app-list-kitten>
+    </div>
+    
+    <div class="muKittens">
+        <app-user-kitten></app-user-kitten>
+    </div>
+</div>
+
