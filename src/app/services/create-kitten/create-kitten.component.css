@@ -1,0 +1,14 @@
+form{
+   width: 40%;
+   margin: 10% auto;
+   border: 2px solid #000;
+   padding: 20px;
+   
+   div{
+         margin: 10px 0;
+   }
+
+   span{
+            color: red;
+   }
+}

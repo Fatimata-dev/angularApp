@@ -1,0 +1,8 @@
+<select [(ngModel)]="selectedRace">
+    
+
+@for (race of races; track race) {
+
+    <option value="{{race}}">{{race}}</option>
+}
+</select>

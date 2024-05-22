@@ -11,6 +11,9 @@ import { WildStudentComponent } from './wild-student/wild-student.component';
 import { SearchComponent } from './search/search.component';
 import { DeveloperComponent } from './@Input/developer/developer.component';
 import { ParentComponent } from './@Output/parent/parent.component';
+import { ListKittenComponent } from './services/list-kitten/list-kitten.component';
+import path from 'path';
+import { CreateKittenComponent } from './services/create-kitten/create-kitten.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -25,6 +28,7 @@ export const routes: Routes = [
     {path:'wcs/:userName',component:WildStudentComponent},
     {path:'input', component:DeveloperComponent},
     {path:'outpout', component:ParentComponent},
+    {path:'kitten', component:ListKittenComponent,children:[{path:'create', component:CreateKittenComponent},]},
     {path:'**', redirectTo: 'home'}
 
    

@@ -1,0 +1,17 @@
+<h1>My kittens</h1>
+<table>
+  <thead>
+    <tr>
+        <th>Name:</th>
+        <th>Date de naissance:</th>
+        <th>Race</th>
+    </tr>
+</thead>
+<tbody>  
+    <tr *ngFor="let kitten of adoptedKitten">
+        <td>{{kitten.name}}</td>
+        <td>{{kitten.age}}</td>
+        <td>{{kitten.race}}</td>
+    </tr>
+</tbody>
+</table>

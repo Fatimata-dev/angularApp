@@ -1,0 +1,21 @@
+<form (ngSubmit)="createKitten()" #myForm="ngForm">
+    <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="kitten.name" >
+    </div>
+    <div class="form-group">
+        <label for="age">Date de naissance </label>
+        <input type="date" class="form-control" id="age" name="age" [(ngModel)]="kitten.age">
+    </div>
+    <div class="form-group">
+        <label for="race"> Race</label>
+        <app-racine id="race" [selectedRace]="kitten.race"   name="race"></app-racine>
+    </div>
+    @if (!myForm.valid) {
+        <span>Veillez remplir correctement le formulaire</span>
+    }
+    
+
+    <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Créer</button>
+
+</form>
