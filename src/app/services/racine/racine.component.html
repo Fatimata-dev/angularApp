@@ -8,23 +8,28 @@
 </select> -->
 
 <nav>
-    <ul>
-        <li>
-        <a [routerLink]="['/kitten/create']">Create kitten</a>
-        </li>
-        
-    </ul>
+  <ul>
+    @if (create== true) {
+    <li>
+      <a [routerLink]="['/kitten/create']">Create kitten</a>
+    </li>
 
+    }@else {
+
+    <li>
+      <a [routerLink]="['/kitten']">All kittens</a>
+    </li>
+    }
+  </ul>
 </nav>
 <router-outlet></router-outlet>
 
 <div class="container">
-    <div class="allKittens">
-        <app-list-kitten></app-list-kitten>
-    </div>
-    
-    <div class="muKittens">
-        <app-user-kitten></app-user-kitten>
-    </div>
-</div>
+  <div class="allKittens">
+    <app-list-kitten></app-list-kitten>
+  </div>
 
+  <div class="myKittens">
+    <app-user-kitten></app-user-kitten>
+  </div>
+</div>

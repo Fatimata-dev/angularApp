@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink ,RouterOutlet} from '@angular/router';
+import { ActivatedRoute, Router, RouterLink ,RouterOutlet} from '@angular/router';
 import { UserKittenComponent } from '../user-kitten/user-kitten.component';
 import { ListKittenComponent } from '../list-kitten/list-kitten.component';
 @Component({
@@ -11,7 +11,25 @@ import { ListKittenComponent } from '../list-kitten/list-kitten.component';
   styleUrl: './racine.component.css'
 })
 export class RacineComponent {
-  // @Input() 
-  // selectedRace:string="Siamois";
-
+  
+  route :ActivatedRoute = inject(ActivatedRoute);
+  router:Router = inject(Router);
+  create :boolean = true;
+  ngOnInit(){
+    this.route.queryParams.subscribe(params => {
+      this.router.events.subscribe(() => {
+        const currentUrl = this.router.url;
+        if(currentUrl.includes('create')){
+          this.create = false;
+        }else{
+          this.create = true;
+        }
+      });
+    });
+  }
 }
+
+  // @Input() 
+  // selectedRace:string="";
+
+
