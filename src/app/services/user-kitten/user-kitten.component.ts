@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { KittenService } from '../../kitten.service';
+import { KittenService } from '../../Service/kitten.service';
 import { NgFor } from '@angular/common';
 
 

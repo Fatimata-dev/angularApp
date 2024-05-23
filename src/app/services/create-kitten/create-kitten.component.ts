@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RacineComponent } from '../racine/racine.component';
-import { KittenService } from '../../kitten.service';
+import { KittenService } from '../../Service/kitten.service';
 
 @Component({
   selector: 'app-create-kitten',

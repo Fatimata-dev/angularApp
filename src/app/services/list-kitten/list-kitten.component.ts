@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CreateKittenComponent } from '../create-kitten/create-kitten.component';
-import { KittenService } from '../../kitten.service';
+import { KittenService } from '../../Service/kitten.service';
 
 @Component({
   selector: 'app-list-kitten',

@@ -11,15 +11,18 @@
   <ul>
     @if (create== true) {
     <li>
-      <a [routerLink]="['/kitten/create']">Create kitten</a>
+      <a [routerLink]="['/service/create']">Create kitten</a>
     </li>
 
     }@else {
 
     <li>
-      <a [routerLink]="['/kitten']">All kittens</a>
+      <a [routerLink]="['/service']">All kittens</a>
     </li>
     }
+    <li>
+      <a [routerLink]="['/service/cocktailList']">Coctails</a>
+
   </ul>
 </nav>
 <router-outlet></router-outlet>

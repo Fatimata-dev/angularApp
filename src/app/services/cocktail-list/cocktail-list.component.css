@@ -1,0 +1,26 @@
+section{
+    h1{
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    .cocktails{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        .cocktail{
+            width:20% ;
+            margin: 10px;
+            border: solid 1px #ccc;
+            box-shadow: 2px 2px 2px #ccc;
+            .image{
+                width: 100%;
+                display: flex;
+                img{
+                    width: 50%;
+                } ;
+            }
+        }
+    }
+}

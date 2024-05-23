@@ -1,0 +1,15 @@
+<section>
+    
+<h1>Cocktails</h1>
+<div class="cocktails">
+@for (cocktail of cocktails; track cocktail) {
+    <div class="cocktail">
+        <h4>Nom:{{cocktail.name}}</h4>
+        <h4>Prix:{{cocktail.prix}}</h4>
+        <div class="image">
+            <h4>Image:</h4>  <img src="{{cocktail.img}}" alt="{{cocktail.name}}">
+        </div>
+    </div>
+}
+</div>
+</section>
