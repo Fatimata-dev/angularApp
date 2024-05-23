@@ -15,6 +15,7 @@ export class RacineComponent {
   route :ActivatedRoute = inject(ActivatedRoute);
   router:Router = inject(Router);
   create :boolean = true;
+  cocktail:boolean= true;
   ngOnInit(){
     this.route.queryParams.subscribe(params => {
       this.router.events.subscribe(() => {
@@ -23,6 +24,11 @@ export class RacineComponent {
           this.create = false;
         }else{
           this.create = true;
+        }
+        if(currentUrl.includes('cocktailList')){
+          this.cocktail = false;
+        }else{
+          this.cocktail = true;
         }
       });
     });

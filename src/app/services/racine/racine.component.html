@@ -9,30 +9,35 @@
 
 <nav>
   <ul>
-    @if (create== true) {
+    @if (create== true && cocktail == true) {
     <li>
       <a [routerLink]="['/service/create']">Create kitten</a>
     </li>
+    
+    <li>
+      <a [routerLink]="['/service/cocktailList']">Coctails</a>
+    </li>
+
 
     }@else {
 
     <li>
-      <a [routerLink]="['/service']">All kittens</a>
+      <a [routerLink]="['/service']">Return</a>
     </li>
-    }
-    <li>
-      <a [routerLink]="['/service/cocktailList']">Coctails</a>
 
+    }
   </ul>
 </nav>
 <router-outlet></router-outlet>
 
-<div class="container">
-  <div class="allKittens">
-    <app-list-kitten></app-list-kitten>
+@if (create == true && cocktail == true) {
+  <div class="container">
+    <div class="allKittens">
+      <app-list-kitten></app-list-kitten>
+    </div>
+  
+    <div class="myKittens">
+      <app-user-kitten></app-user-kitten>
+    </div>
   </div>
-
-  <div class="myKittens">
-    <app-user-kitten></app-user-kitten>
-  </div>
-</div>
+}
