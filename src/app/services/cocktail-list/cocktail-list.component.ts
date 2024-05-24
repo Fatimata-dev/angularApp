@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CocktailService } from '../../Service/cocktail.service';
+import { Cocktail } from '../../models/cocktail';
 
 @Component({
   selector: 'app-cocktail-list',
@@ -9,12 +10,13 @@ import { CocktailService } from '../../Service/cocktail.service';
   styleUrl: './cocktail-list.component.css'
 })
 export class CocktailListComponent {
-  cocktails= [
-    {name: '', img: '', prix: 0}
-  ]  ;
+  cocktails: Cocktail[] = [];
   coctailService: CocktailService = inject(CocktailService);
   ngOnInit(){
-    this.cocktails = this.coctailService.getCocktails();
+    this.coctailService.getCocktails().subscribe((cocktails) => {
+      this.cocktails = cocktails;
+    });
+    console.log(this.cocktails);
 
   }
 
