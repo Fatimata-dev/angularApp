@@ -1,0 +1,12 @@
+main{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .image{
+        width: 30%;
+        margin:  auto;
+        height: 30%;
+        img{
+            width: 100%;
+        }
+    }
+}
