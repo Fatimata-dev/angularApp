@@ -46,6 +46,13 @@
   
 <router-outlet></router-outlet>
 <main>
- 
+ <div class="image">@if (apodData) {
+  <h1>L'image du jour</h1>
+  <h4>{{ apodData.title }}</h4>
+  @if (apodData.media_type === 'image') {
+    <img  [src]="apodData.url" alt="{{ apodData.title }}">}
+  }
   
+  
+ </div>
 </main>
