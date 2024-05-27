@@ -1,6 +1,12 @@
+@if (!details) {
+    <app-pokemon-list [pokemonList]="pokemons" (selectPokemon)="OnSelect($event)"></app-pokemon-list> 
+}
 
-            <h2>Nom: {{ pokemon.nom }}</h2>
-            <p>Description:{{ pokemon.description }}</p>
-            <img src="{{pokemon.image}}" alt="{{ pokemon.nom }}" />
-            <button (click)="details(pokemon.id)">{{btnText}}</button>
+@if (details) {
+    
+    <div class="pokedex__list_items">
+    <app-pokemon-detail [pokemon]="pokemonDetail"></app-pokemon-detail>
+    <button (click)="return()">Retour a la liste</button>
+    </div>
         
+}

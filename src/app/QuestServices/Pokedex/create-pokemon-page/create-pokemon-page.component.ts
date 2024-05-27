@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Pokemons } from '../models/pokemons';
-import { PokedexService } from '../Service/pokedex.service';
-import { RouterLink } from '@angular/router';
+import { Pokemons } from '../../../models/pokemons';
+import { PokedexService } from '../../../Service/pokedex.service';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-create-pokemon-page',
@@ -13,10 +13,11 @@ import { RouterLink } from '@angular/router';
 })
 export class CreatePokemonPageComponent {
 pokedesService: PokedexService = inject(PokedexService);
+router :Router = inject(Router);
 pokemon : Pokemons = {} as Pokemons;
   onSubmit(){
     this.pokedesService.createPokemon(this.pokemon);
-    console.log(this.pokemon);
+    this.router.navigate(['/pokemon']);
 
   }
 }

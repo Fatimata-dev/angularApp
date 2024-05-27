@@ -12,9 +12,9 @@ export class PokedexService {
     return this.pokemons;
   }
 
-  getPokemonById(id: number) {
-    return this.pokemons.find(pokemon => pokemon.id === id);
-  }
+  // getPokemonById(id: number) {
+  //   return this.pokemons.find(pokemon => pokemon.id === id);
+  // }
   createPokemon(pokemon: any){
     this.pokemons.push(pokemon);
   }

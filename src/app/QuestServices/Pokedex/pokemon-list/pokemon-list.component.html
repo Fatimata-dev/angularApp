@@ -11,10 +11,13 @@
     <h1>Pokedex</h1>
     
     <div class="pokedex__list">
-    @for (pokemon of pokemons; track pokemon.id) {
+    @for (pokemon of pokemonList; track pokemon.id) {
         
         <div class="pokedex__list_items">
-    <app-pokedex-page [pokemon]="pokemon" ></app-pokedex-page>
+            <h2>Nom: {{ pokemon.nom }}</h2>
+            <p>Description:{{ pokemon.description }}</p>
+            <img src="{{pokemon.image}}" alt="{{ pokemon.nom }}" />
+            <button (click)="details(pokemon)">Deatils</button>
         </div>
     }
     </div>

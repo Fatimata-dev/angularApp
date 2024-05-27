@@ -1,8 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { Pokemons } from '../../../models/pokemons';
 import { PokedexService } from '../../../Service/pokedex.service';
 import { PokedexPageComponent } from '../pokedex-page/pokedex-page.component';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -12,14 +12,15 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './pokemon-list.component.css'
 })
 export class PokemonListComponent {
-
-  pokedexService: PokedexService = inject(PokedexService);
-  pokemons: Pokemons[] = []
-  id: number = 0;
-
+  @Input()
+  pokemonList: Pokemons[]= [];
+  @Output() selectPokemon = new EventEmitter<Pokemons>(); 
   
   ngOnInit(){
+   
+  }
 
-    this.pokemons = this.pokedexService.getAllPokemons();
+  details(pokemon:Pokemons){ 
+      this.selectPokemon.emit(pokemon);
   }
 }

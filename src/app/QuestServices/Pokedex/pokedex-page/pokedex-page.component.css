@@ -1,8 +1,11 @@
 
-        img{
-            width: 30%;
-        }
-
+.pokedex__list_items{
+    border: solid 3px #ccc; 
+    border-radius: 2%;
+    box-shadow: blanchedalmond;
+     width: 80%;
+     margin: 1rem auto;
+     padding: 20px;
         button{
             width: 50%;
             padding: 0.5rem;
@@ -14,4 +17,4 @@
         }
 
     
-
+    }

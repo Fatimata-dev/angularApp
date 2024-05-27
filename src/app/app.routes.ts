@@ -14,10 +14,9 @@ import { ParentComponent } from './@Output/parent/parent.component';
 import { CreateKittenComponent } from './QuestServices/create-kitten/create-kitten.component';
 import { RacineComponent } from './QuestServices/racine/racine.component';
 import { CocktailListComponent } from './QuestServices/cocktail-list/cocktail-list.component';
-import { PokemonListComponent } from './QuestServices/Pokedex/pokemon-list/pokemon-list.component';
-import { PokemonDetailComponent } from './QuestServices/Pokedex/pokemon-detail/pokemon-detail.component';
-import { CreatePokemonPageComponent } from './create-pokemon-page/create-pokemon-page.component';
+import { CreatePokemonPageComponent } from './QuestServices/Pokedex/create-pokemon-page/create-pokemon-page.component';
 import { NazaComponent } from './naza/naza.component';
+import { PokedexPageComponent } from './QuestServices/Pokedex/pokedex-page/pokedex-page.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -33,8 +32,7 @@ export const routes: Routes = [
     {path:'input', component:DeveloperComponent},
     {path:'outpout', component:ParentComponent},
     {path:'service', component:RacineComponent,children:[{path:'create', component:CreateKittenComponent},{path:'cocktailList', component:CocktailListComponent}]},
-    {path:'pokemon', component:PokemonListComponent, children:[]},
-    {path:'pokemon/:id', component:PokemonDetailComponent},
+    {path:'pokemon', component:PokedexPageComponent},
     {path:'createPokemon', component:CreatePokemonPageComponent},
     {path: 'naza', component:NazaComponent},
     {path:'**', redirectTo: 'home'}
