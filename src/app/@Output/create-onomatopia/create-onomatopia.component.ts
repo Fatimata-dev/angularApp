@@ -17,7 +17,6 @@ export class CreateOnomatopiaComponent {
 
   createOnomatopia() {
     this.sendOnomatopiaToParent.emit(this.newOnomatopia);
-    //console.log(this.newOnomatopia);
     this.newOnomatopia = '';
   }
 }

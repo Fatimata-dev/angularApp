@@ -14,7 +14,4 @@ export class ParentComponent {
   onReceiveNewOnomatopia(newOnomatopia: string):void {
     this.onomatopoeiaList.push(newOnomatopia) ;
   }
-  // ngOnInit(){
-  //   console.log(this.onomatopoeiaList);
-  // }
 }

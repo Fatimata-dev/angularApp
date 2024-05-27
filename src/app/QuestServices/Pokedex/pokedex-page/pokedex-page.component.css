@@ -1,23 +1,6 @@
-.pokedex{
-    width: 100%;
-    margin: auto;
-    h1{
-        text-align: center;
-    
-    }
-.pokedex__list{
-    width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    .pokedex__list_items{
-       border: solid 3px #ccc; 
-       border-radius: 5%;
-       box-shadow: blanchedalmond;
-        width: 15%;
-        height: 50vh;
+
         img{
-            width: 50%;
+            width: 30%;
         }
 
         button{
@@ -30,7 +13,5 @@
             margin: auto 50px ;
         }
 
-    }
-}
+    
 
-}

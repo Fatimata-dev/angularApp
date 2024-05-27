@@ -1,6 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
 import { Pokemons } from '../../../models/pokemons';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-pokedex-page',
@@ -11,11 +11,26 @@ import { Router } from '@angular/router';
 })
 export class PokedexPageComponent {
   router : Router = inject(Router);
+  route : ActivatedRoute = inject(ActivatedRoute);
+  btnText: string = 'Default';
   @Input()
-  pokemons: Pokemons[] = [];
-
-  details(id:number) {
-    this.router.navigate([`/pokemon/${id}`]);
+  pokemon: Pokemons = new Pokemons(0, '', '', '');
+  id : number = 0;
+  ngOnInit(){
+    this.id = this.route.snapshot.params['id'];
+   
   }
 
+
+  details(id:number) {
+    if(this.router.url === `/pokemon/${id}`){
+      this.btnText = 'Retour à la liste';
+      this.router.navigate([`/pokemon`]);
+    }else{
+      this.btnText = 'Details';
+      this.router.navigate([`/pokemon/${id}`]);
+    }
+  }
+
+  
 }

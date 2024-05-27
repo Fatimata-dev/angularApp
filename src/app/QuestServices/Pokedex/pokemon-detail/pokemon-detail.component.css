@@ -1,0 +1,9 @@
+.detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:  80%;
+    border: solid 3px #ccc;
+    margin:10px auto;
+    padding: 10px;
+}

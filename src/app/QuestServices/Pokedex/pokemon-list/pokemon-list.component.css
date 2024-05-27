@@ -11,3 +11,29 @@ li{
             cursor: pointer;
     }
 }
+.pokedex{
+    width: 100%;
+    margin: auto;
+    h1{
+        text-align: center;
+    
+    }
+    
+.pokedex__list{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px; 
+    margin: 0 20% ;
+
+    
+    .pokedex__list_items{
+        border: solid 3px #ccc; 
+        border-radius: 5%;
+        box-shadow: blanchedalmond;
+         width: 50%;
+         height: 50vh;
+         margin: 1rem;
+    }
+}
+}
