@@ -16,19 +16,24 @@ export class PokedexPageComponent {
   @Input()
   pokemon: Pokemons = new Pokemons(0, '', '', '');
   id : number = 0;
+  isList : boolean = false;
   ngOnInit(){
-    this.id = this.route.snapshot.params['id'];
+    if(this.router.url === `/pokemon`){
+      this.btnText = 'Details';
+      this.isList = true;
    
+   }else{
+    this.btnText = 'Retour à la liste';
+    this.isList = false;
   }
+}
 
 
   details(id:number) {
-    if(this.router.url === `/pokemon/${id}`){
-      this.btnText = 'Retour à la liste';
-      this.router.navigate([`/pokemon`]);
-    }else{
-      this.btnText = 'Details';
+    if(this.isList){
       this.router.navigate([`/pokemon/${id}`]);
+    }else{
+      this.router.navigate([`/pokemon`]);
     }
   }
 
