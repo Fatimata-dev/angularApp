@@ -14,9 +14,9 @@ import { ParentComponent } from './@Output/parent/parent.component';
 import { CreateKittenComponent } from './QuestServices/create-kitten/create-kitten.component';
 import { RacineComponent } from './QuestServices/racine/racine.component';
 import { CocktailListComponent } from './QuestServices/cocktail-list/cocktail-list.component';
-import { CreatePokemonPageComponent } from './QuestServices/Pokedex/create-pokemon-page/create-pokemon-page.component';
 import { NazaComponent } from './naza/naza.component';
-import { PokedexPageComponent } from './QuestServices/Pokedex/pokedex-page/pokedex-page.component';
+import { PokedexPageComponent } from './QuestServices/Pokedex/Pages/pokedex-page/pokedex-page.component';
+import { CreatePokemonPageComponent } from './QuestServices/Pokedex/Pages/pokedex-page/create-pokemon-page/create-pokemon-page.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full'},

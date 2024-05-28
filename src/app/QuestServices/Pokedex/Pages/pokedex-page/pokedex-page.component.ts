@@ -1,14 +1,13 @@
 import { Component, inject, Input } from '@angular/core';
-import { Pokemons } from '../../../models/pokemons';
-import { ActivatedRoute, Router } from '@angular/router';
-import { PokedexService } from '../../../Service/pokedex.service';
-import { PokemonListComponent } from '../pokemon-list/pokemon-list.component';
-import { PokemonDetailComponent } from '../pokemon-detail/pokemon-detail.component';
-
+import { Pokemons } from '../../Shared/pokemons';
+import { ActivatedRoute, Router, RouterLink, RouterOutlet } from '@angular/router';
+import { PokedexService } from '../../Shared/pokedex.service';
+import { PokemonListComponent } from '../../Component/pokemon-list/pokemon-list.component'; 
+import { PokemonDetailComponent } from '../../Component/pokemon-detail/pokemon-detail.component'; 
 @Component({
   selector: 'app-pokedex-page',
   standalone: true,
-  imports: [PokemonListComponent,PokemonDetailComponent],
+  imports: [PokemonListComponent,PokemonDetailComponent,RouterLink,RouterOutlet],
   templateUrl: './pokedex-page.component.html',
   styleUrl: './pokedex-page.component.css'
 })

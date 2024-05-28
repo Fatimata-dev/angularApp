@@ -1,16 +1,4 @@
-li{
-    list-style: none;
-    
-    a{
-            text-decoration: none;
-            width: 50%;
-            padding: 0.5rem;
-            border-radius: 5px;
-            border: 1px solid black;
-            background-color: blanchedalmond;
-            cursor: pointer;
-    }
-}
+
 .pokedex{
     width: 100%;
     margin: auto;

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { POKEMONS } from '../../assets/pokemons-mock';
+import { POKEMONS } from './pokemons-mock';
 
 @Injectable({
   providedIn: 'root'

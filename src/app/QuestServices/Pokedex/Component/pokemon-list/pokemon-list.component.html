@@ -1,0 +1,15 @@
+
+<div class="pokedex">
+    
+    <h1>Pokedex</h1>
+    
+    <div class="pokedex__list">
+    @for (pokemon of pokemonList; track pokemon.id) {
+        
+        <div class="pokedex__list_items">
+           <app-pokemon-detail [pokemon]="pokemon"></app-pokemon-detail>
+            <button (click)="details(pokemon)">Deatils</button>
+        </div>
+    }
+    </div>
+</div>

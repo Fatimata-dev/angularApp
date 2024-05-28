@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Pokemons } from '../../../models/pokemons';
-import { PokedexService } from '../../../Service/pokedex.service';
+import { Pokemons } from '../../../Shared/pokemons';
+import { PokedexService } from '../../../Shared/pokedex.service';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
